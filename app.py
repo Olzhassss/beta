@@ -1,5 +1,5 @@
 import ccxt
-import ../configs
+from configs import config
 
 
 sell = [{'coin': 'USDT', 'quantity': 5500.0}]
@@ -81,5 +81,5 @@ def sell_market(dict_):
 #     return exchange.create_order(symbol, type, side, amount, price, params)
 
 
-print( buy_market(sell[0]) )
-print( sell_market(buy[0]) )
+print(buy_market(buy[0]))
+print(sell_market(sell[0]))
