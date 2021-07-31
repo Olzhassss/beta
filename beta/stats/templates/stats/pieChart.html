@@ -1,0 +1,9 @@
+{% extends 'stats/index.html' %}
+{% load plotly_dash %}
+
+{% block chartdata %}
+    <div class='container'>
+            {% plotly_app name='pieChart' ratio=1 %}
+    </div>
+
+{% endblock chartdata %}

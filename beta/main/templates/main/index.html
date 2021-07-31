@@ -1,0 +1,10 @@
+{% extends 'main/head-wrapper.html' %}
+{% load static %}
+
+{% block stylesheets %}
+    <link rel="stylesheet" href="{% static 'main/stylesheets/index.style.css' %}">
+{% endblock stylesheets %}
+
+{% block body %}
+    {% include 'main/header.html' %}
+{% endblock body %}

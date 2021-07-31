@@ -1,0 +1,45 @@
+[tool.poetry]
+name = "arystan_backend"
+version = "0.1.0"
+description = ""
+authors = ["Extrum <support@extrum.io>"]
+
+[tool.poetry.dependencies]
+python = "^3.8"
+Django = "^3.2.4"
+djangorestframework = "^3.12.4"
+# TODO: migrate https://pypi.org/project/django-environ-2/
+django-environ = "^0.4.5"
+django-cors-headers = "^3.7.0"
+djangorestframework-simplejwt = "^4.7.1"
+requests = "^2.25.1"
+mysqlclient = "^2.0.3"
+python-binance = "^1.0.12"
+pandas = "^1.2.4"
+loguru = "^0.5.3"
+drf-yasg = "^1.20.0"
+paypal-checkout-serversdk = "^1.0.1"
+uvicorn = {extras = ["standard"], version = "^0.14.0"}
+django-ninja = "^0.13.2"
+orjson = "^3.6.0"
+gunicorn = "^20.1.0"
+django-plotly-dash = "^1.6.4"
+Brotli = "^1.0.9"
+channels-redis = "^3.3.0"
+psycopg2 = "^2.9.1"
+
+[tool.poetry.dev-dependencies]
+pylint = "^2.8.3"
+pylint-django = "^2.4.4"
+pylint-plugin-utils = "^0.6"
+autopep8 = "^1.5.7"
+neovim = "^0.3.1"
+matplotlib = "3.2.2"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
+
+[virtualenvs]
+create = true
+in-project = true

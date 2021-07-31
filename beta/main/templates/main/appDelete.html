@@ -1,0 +1,18 @@
+{% extends 'main/head-wrapper.html' %}
+
+{% block body %}
+    {% include 'main/back-link.html' with href='main:appList' %}
+
+<form class='display-block' action="" method='POST'>
+    {% csrf_token %}
+    <div class='container mt-3'>
+        <h1>Do you want to delete this profile? ({{object.name}} {{object.surname}})</h1>
+        <br>
+        <div class='row'></div>
+            <input type="submit" class='btn btn-success col-2' value="Yes">
+            <a href="{% url 'main:appList' %}" class='btn btn-warning col-2'>Cancel</a>
+        </div>
+    </div>
+</form>
+
+{% endblock %}

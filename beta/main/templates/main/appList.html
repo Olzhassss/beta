@@ -1,0 +1,26 @@
+{% extends 'main/head-wrapper.html' %}
+
+{% block body %}
+<div class="container">
+    {% include 'main/back-link.html' with href='main:index' %}
+
+    <h2 class='mt-3'> List of applications: </h2>
+    <table class='table table-bordered mt-3'>
+        <tr>
+            <th>#</th>
+            <th>Name</th>
+            <th>Surname</th>
+            <th>Sex</th>
+        </tr>
+    {% for obj in object_list %}
+        <tr>
+            <td><a class='text-decoration-none' href="{% url 'main:appBrowse' obj.id %}"> {{ forloop.counter }} </a></td>
+            <td>{{obj.name}}</td>
+            <td>{{obj.surname}}</td>
+            <td>{{obj.sex}}</td>
+        </tr>
+
+    {% endfor %}
+    </table>
+</div>
+{% endblock body %}

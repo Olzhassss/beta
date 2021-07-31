@@ -1,0 +1,21 @@
+<div id="header" class="d-flex flex-column flex-md-row align-items-center p-3 shadow bg-dark" >
+        <!-- Logo and title -->
+        <a href="" class="text-decoration-none">
+            <img src="" id="header-logo" hspace="0" alt="logo">
+        </a>
+        <h4  class="mr-md-auto ml-md-2" >
+            <a class="text-decoration-none main_text" href="">
+                AppleTree English courses!
+            </a>
+        </h4>
+        <!-- End of Logo and title -->
+        <!-- Navigation row -->
+        <nav class="my-2 my-md-0 mr-md-2 nav-bar">
+            <a class="p-2 text-light" href="">Contacts</a>
+            <a class="p-2 text-light" href="">Price list</a>
+            <a class="p-2 text-light" href="{% url 'stats:index' %}">Statistics</a>
+            <a class="p-2 text-light" href="{% url 'main:appList' %}">Administration</a>
+        </nav>
+        <!-- End of navigation row -->
+        <a class="btn application_link mr-md-2 my-2 my-md-0 ml-md-5" href="{% url 'main:application' %}">Application</a>
+</div>

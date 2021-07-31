@@ -1,0 +1,23 @@
+{% extends 'main/head-wrapper.html' %}
+
+{% block body %}
+	{% include 'main/back-link.html' with href='main:appList' %}
+	
+<hr>
+<div class="container">
+	<h1 class="my-3">{{ obj.Name }} {{ obj.Surname }} ( ID = {{ obj.ID }} )</h1>
+	<div class="my-3">
+		<table class="table table-bordered" style="table-layout:fixed;">
+			<!-- Table rows -->
+			{% for key, value in obj.items %}
+			    <tr>
+			    	<th scope='col' width="40%" >{{key}}</th>
+			    	<td style="word-wrap: break-word;">{{value}}</td>
+			    </tr>
+			{% endfor %}
+		</table>
+	</div>
+	<a class="btn btn-success" href="{% url 'main:appDelete' obj.ID %}">Delete</a>
+</div>
+
+{% endblock body %}
